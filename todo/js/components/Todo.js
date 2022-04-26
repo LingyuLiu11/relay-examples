@@ -91,7 +91,7 @@ export default function Todo({
           onChange={handleCompleteChange}
           type="checkbox"
         />
-
+        <div> this is todo.js</div>
         <label onDoubleClick={handleLabelDoubleClick}>{todo.text}</label>
         <button className="destroy" onClick={handleRemoveTodo} />
       </div>

@@ -64,6 +64,8 @@ const TodoTextInput = ({
   };
 
   return (
+    <div>
+    <div>this is todoTextInput</div>
     <input
       className={className}
       onBlur={handleBlur}
@@ -73,6 +75,7 @@ const TodoTextInput = ({
       ref={inputRef}
       value={text}
     />
+    </div>
   );
 };
 

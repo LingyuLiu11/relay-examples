@@ -59,6 +59,7 @@ app.use(
   persistedQueries({queryMap}),
   graphqlHTTP({
     schema: schema,
+    graphiql: true,
     pretty: true,
   }),
 );

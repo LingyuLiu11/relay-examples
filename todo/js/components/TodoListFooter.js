@@ -48,7 +48,7 @@ export default function TodoListFooter({
         <strong>{numRemainingTodos}</strong> item
         {numRemainingTodos === 1 ? '' : 's'} left
       </span>
-
+    <div> this is TodoListFooter</div>
       {user.completedCount > 0 && (
         <button
           className="clear-completed"

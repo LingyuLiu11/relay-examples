@@ -48,22 +48,8 @@ const modernEnvironment: Environment = new Environment({
 const rootElement = document.getElementById('root');
 
 if (rootElement) {
-  const entryPointRef = loadEntryPoint(
-    {getEnvironment: () => modernEnvironment},
-    TodoAppEntryPoint,
-    {
-      // Mock authenticated ID that matches database
-      userId: 'me',
-    },
-  );
+  
   ReactDOM.render(
-    <RelayEnvironmentProvider environment={modernEnvironment}>
-      <React.Suspense fallback={<div>Loading</div>}>
-        <ErrorBoundary fallbackRender={({error}) => <div>{error.message}</div>}>
-          <EntryPointContainer entryPointReference={entryPointRef} props={{}} />
-        </ErrorBoundary>
-      </React.Suspense>
-    </RelayEnvironmentProvider>,
-    rootElement,
+    <p>to do </p>, rootElement
   );
 }

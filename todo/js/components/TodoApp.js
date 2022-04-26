@@ -23,11 +23,13 @@ export default (function TodoApp({queries}: Props): React.Node {
         }
       }
     `,
-    queries.todoAppQueryRef,
+    queries.todoAppQueryRef,//this gives todos in the middle right
+    
   );
 
   return (
     <div>
+      <div> this is todoapp.js</div>
       <section className="todoapp">
         <TodoList userRef={user} />
       </section>

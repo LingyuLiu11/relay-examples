@@ -52,17 +52,18 @@ export default function TodoList({userRef}: Props): React.Node {
   const handleMarkAllChange = (e: SyntheticEvent<HTMLInputElement>) => {
     const complete = e.currentTarget.checked;
     commitMarkAllTodosMutation(complete);
+    // console.log(user);
   };
 
   return (
     <>
       <header className="header">
-        <h1>todos</h1>
+        <h1>todos this is in components/TodoList.js</h1>
 
         <TodoTextInput
           className="new-todo"
           onSave={handleOnSave}
-          placeholder="What needs to be done?"
+          placeholder="What needs to be done? this is in TodoList.js"
         />
       </header>
 

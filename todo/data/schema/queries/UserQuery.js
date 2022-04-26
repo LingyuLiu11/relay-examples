@@ -2,7 +2,7 @@
 /* graphql-relay doesn't export types, and isn't in flow-typed.  This gets too messy */
 /* eslint flowtype/require-return-type: 'off' */
 
-import {GraphQLString} from 'graphql';
+import {GraphQLList, GraphQLObjectType, GraphQLString} from 'graphql';
 import {GraphQLUser} from '../nodes';
 import {User, getUserOrThrow} from '../../database';
 
@@ -17,5 +17,12 @@ const UserQuery = {
   },
   resolve: (root: {}, {id}: Input): User => getUserOrThrow(id),
 };
+
+// const allUsers = new GraphQLObjectType({
+//   type: new GraphQLList(User),
+//   resolve(parent, args) {
+//     return User.find({});
+//   }
+// })
 
 export {UserQuery};
