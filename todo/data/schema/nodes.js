@@ -37,6 +37,10 @@ const GraphQLUser = new GraphQLObjectType({
     id: {
       type: new GraphQLNonNull(GraphQLString),
       resolve: (_): string => _.id,
+    },
+    status: {
+      type: new GraphQLNonNull(GraphQLString),
+      resolve: (_): string => `I like ${_.fav}`,
     }
   }
 })
