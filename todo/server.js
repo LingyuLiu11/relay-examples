@@ -1,7 +1,7 @@
 // @flow
 import express from 'express';
 import {graphqlHTTP} from 'express-graphql';
-import {persistedQueries} from 'express-graphql-persisted-queries';
+
 import fs from 'fs';
 import path from 'path';
 import webpack from 'webpack';
@@ -53,10 +53,10 @@ const app = new WebpackDevServer(compiler, {
 app.use('/', express.static(path.resolve(__dirname, 'public')));
 
 // Setup GraphQL endpoint
-const queryMap = JSON.parse(fs.readFileSync(QUERY_MAP_FILE, 'utf8'));
+
 app.use(
   '/graphql',
-  persistedQueries({queryMap}),
+  
   graphqlHTTP({
     schema: schema,
     graphiql: true,

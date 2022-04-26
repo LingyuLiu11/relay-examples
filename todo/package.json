@@ -6,7 +6,8 @@
     "flow-typed": "flow-typed install --flowVersion=0.168.0",
     "flow": "flow",
     "update-schema": "babel-node ./scripts/updateSchema.js",
-    "lint": "eslint ./ --cache"
+    "lint": "eslint ./ --cache",
+    "relay": "relay-compiler"
   },
   "dependencies": {
     "classnames": "2.3.1",
@@ -16,10 +17,10 @@
     "graphql": "^15.4.0",
     "graphql-relay": "^0.6.0",
     "prop-types": "^15.7.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-error-boundary": "^3.1.4",
-    "react-relay": "^13.1.1",
+    "react-relay": "^13.2.0",
     "relay-runtime": "^13.1.1",
     "todomvc-app-css": "^2.4.1",
     "todomvc-common": "^1.0.3",
@@ -49,7 +50,7 @@
     "flow-bin": "^0.168.0",
     "flow-typed": "^2.6.0",
     "prettier": "^2.3.0",
-    "relay-compiler": "^13.1.1",
+    "relay-compiler": "^13.2.0",
     "webpack": "^4.41.5",
     "webpack-dev-server": "3.10.3"
   },
