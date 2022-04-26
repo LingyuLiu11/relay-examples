@@ -20,7 +20,7 @@ import {
 } from 'relay-runtime';
 
 import {ErrorBoundary} from 'react-error-boundary';
-import TodoAppEntryPoint from './entrypoints/TodoApp.entrypoint';
+
 
 const rootElement = document.getElementById('root');
 

@@ -24,7 +24,7 @@ const compiler = webpack({
   entry: [
     'whatwg-fetch',
     path.resolve(__dirname, 'js', 'app.js'),
-    path.resolve(__dirname, 'js', 'components', 'TodoApp.js'),
+    
   ],
   module: {
     rules: [

@@ -2,12 +2,7 @@ import {GraphQLObjectType, GraphQLSchema} from 'graphql';
 
 import {nodeField} from './nodes.js';
 import {allUsers, UserQuery} from './queries/UserQuery';
-import {AddTodoMutation} from './mutations/AddTodoMutation';
-import {ChangeTodoStatusMutation} from './mutations/ChangeTodoStatusMutation';
-import {MarkAllTodosMutation} from './mutations/MarkAllTodosMutation';
-import {RemoveCompletedTodosMutation} from './mutations/RemoveCompletedTodosMutation';
-import {RemoveTodoMutation} from './mutations/RemoveTodoMutation';
-import {RenameTodoMutation} from './mutations/RenameTodoMutation';
+
 
 const Query = new GraphQLObjectType({
   name: 'Query',

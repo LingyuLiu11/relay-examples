@@ -12,11 +12,11 @@ type Input = {
 
 const users = [
   {
-    id: 'user1',
+    id: 'jser1',
     fav: 'ts',
   },
   {
-    id: 'user2', 
+    id: 'jser2', 
     fav: 'flow'
   },
 ];
