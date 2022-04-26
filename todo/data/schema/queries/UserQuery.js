@@ -10,13 +10,41 @@ type Input = {
   +id: string,
 };
 
+const users = [
+  {
+    id: 'user1',
+    fav: 'ts',
+  },
+  {
+    id: 'user2', 
+    fav: 'flow'
+  },
+];
+
+const fetchUser = (id: String) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(users.find((item) => item.id === id));
+    }, 2000);
+  });
+}
+
 const UserQuery = {
   type: GraphQLUser,
   args: {
     id: {type: GraphQLString},
   },
-  resolve: (root: {}, {id}: Input): User => getUserOrThrow(id),
-};
+  resolve: (root: {}, {id}: Input): User => {
+    return fetchUser(id);
+  }
+}
+// const UserQuery = {
+//   type: GraphQLUser,
+//   args: {
+//     id: {type: GraphQLString},
+//   },
+//   resolve: (root: {}, {id}: Input): User => getUserOrThrow(id),
+// };
 
 // const allUsers = new GraphQLObjectType({
 //   type: new GraphQLList(User),

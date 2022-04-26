@@ -14,7 +14,7 @@ const Query = new GraphQLObjectType({
   fields: {
     user: UserQuery,
     // test: allUsers,
-    node: nodeField,
+    // node: nodeField,
   },
 });
 
